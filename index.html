@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ultra Gaming World – Free Online Browser Games</title>
+<meta name="description" content="Play free browser games: racing, shooter, snake, puzzle and adventure. Earn coins, unlock badges and climb the leaderboard on Ultra Gaming World.">
+<meta name="theme-color" content="#07070d">
+<meta property="og:title" content="Ultra Gaming World">
+<meta property="og:description" content="Free premium browser games with coins, badges and daily rewards.">
+<link rel="icon" href="assets/logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<!-- AFTER ADSENSE APPROVAL: uncomment and replace the publisher ID
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
+</head>
+<body>
+<div id="load"><div class="spin"></div><b>ULTRA GAMING WORLD</b></div>
+<header>
+  <a class="logo" href="#home"><img src="assets/logo.svg" alt="" width="32" height="32">ULTRA<span>GAMING</span></a>
+  <nav aria-label="Main"><a href="#home">Home</a><a href="#games">Games</a><a href="#dashboard">Profile</a><a href="#leaderboard">Leaders</a></nav>
+  <div class="coins" title="Your coins">🪙 <b id="coinN">0</b></div>
+</header>
+<div class="ad" data-slot="header"></div>
+<main>
+<section id="home" class="hero">
+  <canvas id="bg" aria-hidden="true"></canvas>
+  <div class="hi"><h1>Play. Win. Level up.</h1><p>Five free browser games, daily rewards, badges and a leaderboard. No download needed.</p><button class="btn" data-play="racer">▶ Play now</button></div>
+</section>
+<div class="ad" data-slot="home"></div>
+<div class="wrap">
+<div class="mainc">
+  <h2>Featured games</h2><div class="grid" id="g-feat"></div>
+  <h2>Popular games</h2><div class="grid" id="g-pop"></div>
+  <h2>New games</h2><div class="grid" id="g-new"></div>
+  <h2>Trending games</h2><div class="grid" id="g-trend"></div>
+  <h2 id="games">All games</h2>
+  <div class="tools"><input id="q" type="search" placeholder="Search games" aria-label="Search games"><div id="chips"></div></div>
+  <div class="grid" id="g-all"></div>
+</div>
+<aside>
+  <div class="ad" data-slot="sidebar"></div>
+  <div class="panel"><h3>Latest updates</h3><ul class="news">
+    <li><b>Daily reward</b> Claim free coins every day in your profile.</li>
+    <li><b>Neon Quest</b> Adventure game with endless levels is live.</li>
+    <li><b>Badges</b> Six achievement badges to unlock.</li>
+    <li><b>Mobile</b> On-screen touch controls for every game.</li>
+  </ul></div>
+</aside>
+</div>
+<section id="dashboard" class="wrap1">
+  <h2>Player dashboard</h2>
+  <div class="panel dash">
+    <div><label for="nm">Player name</label><input id="nm" maxlength="14"><p>Level <b id="lvl">1</b> · <span id="xpn">0</span>/100 XP</p><div class="bar"><i id="xpb"></i></div></div>
+    <div><p>Games played: <b id="plays">0</b></p><button class="btn" id="daily">🎁 Claim daily reward</button> <button class="btn alt" id="rew">🎬 Bonus coins</button></div>
+    <div><h3>Badges</h3><div id="badges" class="badges"></div></div>
+  </div>
+</section>
+<section id="leaderboard" class="wrap1">
+  <h2>Leaderboard</h2>
+  <div class="panel"><table><thead><tr><th>Game</th><th>Player</th><th>Best score</th></tr></thead><tbody id="lb"></tbody></table><p class="sm">Scores are saved on this device.</p></div>
+</section>
+</main>
+<div class="ad" data-slot="footer"></div>
+<footer>
+  <div><b>ULTRA GAMING WORLD</b><p>Free browser games for everyone.</p></div>
+  <div class="fl"><button data-dlg="about">About us</button><button data-dlg="contact">Contact us</button><button data-dlg="privacy">Privacy policy</button><button data-dlg="terms">Terms and conditions</button></div>
+  <small>© <span id="yr"></span> Ultra Gaming World</small>
+</footer>
+
+<dialog id="gm" aria-label="Game">
+  <div class="gh"><b id="gt"></b><span id="hud"></span>
+    <button id="pz" aria-label="Pause">⏸</button><button id="rs" aria-label="Restart">↻</button><button id="mu" aria-label="Sound">🔊</button><button id="cl" aria-label="Close">✕</button></div>
+  <div class="cvw"><canvas id="cv" width="360" height="480"></canvas><div id="ov" hidden></div></div>
+  <div class="pad"><button data-k="l">◀</button><button data-k="u">▲</button><button data-k="d">▼</button><button data-k="r">▶</button></div>
+  <p class="sm" id="help"></p>
+</dialog>
+<dialog id="rwd"><h3>Bonus coins</h3><p>Watch the short sponsor break to earn 25 coins. Ads are never shown during gameplay.</p><div class="ad" data-slot="reward"></div><p id="rt" class="sm"></p><button class="btn" id="rclaim" disabled>Claim 25 coins</button> <button class="btn alt" data-close>Close</button></dialog>
+<dialog id="about"><h3>About us</h3><p>Ultra Gaming World is an independent platform for fast, free browser games. We build every game in-house with HTML5, so everything runs instantly on phones, tablets and computers.</p><button class="btn alt" data-close>Close</button></dialog>
+<dialog id="contact"><h3>Contact us</h3><form action="mailto:your-email@example.com" method="post" enctype="text/plain"><label for="cn">Name</label><input id="cn" name="name" required><label for="cm">Message</label><textarea id="cm" name="message" rows="4" required></textarea><button class="btn">Send message</button> <button type="button" class="btn alt" data-close>Close</button></form></dialog>
+<dialog id="privacy"><h3>Privacy policy</h3><p>We store your game progress (coins, scores, badges, name) only in your own browser using local storage. We do not collect personal information through the games.</p><p>This site may show ads through Google AdSense. Google and its partners may use cookies to serve ads based on your visits to this and other sites. You can manage ad personalization at adssettings.google.com. Where required, we ask for your consent before personalized ads.</p><p>Questions? Use the Contact us form.</p><button class="btn alt" data-close>Close</button></dialog>
+<dialog id="terms"><h3>Terms and conditions</h3><p>By using this site you agree to play fairly and not to attempt to cheat, hack or disrupt the service. Coins and badges have no cash value. Games are provided as is, without warranty. We may update the site and these terms at any time.</p><button class="btn alt" data-close>Close</button></dialog>
+<div id="toast" role="status"></div>
+<script src="script.js"></script>
+</body>
+</html>
